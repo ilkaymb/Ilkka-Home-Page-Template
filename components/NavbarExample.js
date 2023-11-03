@@ -1,19 +1,21 @@
 import React, { useState } from "react";
+import { FaHome, FaUser, FaEnvelope } from "react-icons/fa"; // Importing react icons for Home, About, and Contact
 import Icon from "@/images/icon.svg";
 import Image from "next/image";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav
-      className=" shadow w-full fixed bg-red-900"
+      className="shadow w-full fixed bg-red-900"
       style={{ color: "white", zIndex: 999 }}
     >
       <div className="container mx-auto p-4">
         <div className="flex justify-between items-center">
           <a
             href="#"
-            className="font-bold relative flex justify-item-center items-center gap-4 text-4xl"
+            className="font-bold relative flex justify-center items-center gap-4 text-4xl"
           >
             <Image
               src={Icon}
@@ -27,20 +29,23 @@ const Navbar = () => {
             ILKKA
           </a>
           <div className="hidden md:flex space-x-4">
-            <a href="#" className="text-white-800 hover:text-black">
-              Home
-            </a>
-            <a href="#" className="text-white-800 hover:text-black">
-              About
-            </a>
-            <a href="#" className="text-white-800 hover:text-black">
-              Services
+            <a
+              href="#"
+              className="text-white-800 hover:text-black flex items-center gap-2"
+            >
+              <FaHome size="20px" /> Home
             </a>
             <a
               href="#"
-              className="text-white-800 hover:text-black transition duration-300"
+              className="text-white-800 hover:text-black flex items-center gap-2"
             >
-              Contact
+              <FaUser size="20px" /> About
+            </a>
+            <a
+              href="#"
+              className="text-white-800 hover:text-black flex items-center gap-2 transition duration-300"
+            >
+              <FaEnvelope size="20px" /> Contact
             </a>
           </div>
           <div className="md:hidden flex items-center">
@@ -66,30 +71,24 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={isOpen ? "md:hidden" : "hidden"}>
+      <div className={isOpen ? "md:hidden pb-5" : "hidden"}>
         <a
           href="#"
-          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black"
+          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
         >
-          Home
+          <FaHome size="20px" /> Home
         </a>
         <a
           href="#"
-          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black"
+          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
         >
-          About
+          <FaUser size="20px" /> About
         </a>
         <a
           href="#"
-          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black"
+          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
         >
-          Services
-        </a>
-        <a
-          href="#"
-          className="block py-2 px-4 text-white  hover:bg-gray-100 hover:text-black"
-        >
-          Contact
+          <FaEnvelope size="20px" /> Contact
         </a>
       </div>
     </nav>

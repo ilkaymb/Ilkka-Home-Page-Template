@@ -77,7 +77,7 @@ const Slider = () => {
                       padding: 20,
                     }}
                   >
-                    <h2 class="text-3xl font-semibold text-gray-800 mb-3 whitespace-normal">
+                    <h2 class="text-3xl font-semibold text-gray-800 mb-3 whitespace-normal text-center">
                       Başlık
                     </h2>
 

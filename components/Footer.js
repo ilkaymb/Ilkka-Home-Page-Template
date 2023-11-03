@@ -49,7 +49,7 @@ const Footer = () => {
               className="font-bold"
               style={{ textDecoration: "underline" }}
             >
-              Ilkay Hehmet Bora
+              Ilkay Mehmet Bora
             </Link>{" "}
           </p>
         </div>
