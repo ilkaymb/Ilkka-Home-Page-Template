@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Slogan() {
   return (
-    <div className=" w-full py-36 px-5 mt-10 bg-[#101010]">
+    <div className=" w-full py-36 px-5 mt-10 bg-[#161616]">
       <div className="container flex items-center justify-center gap-5  flex-col text mx-auto">
         <p className="font-bold text-white text-4xl ">
           {'"'} Lorem ipsum dolor sit amet consectetur adipisicing elit{'. "'}

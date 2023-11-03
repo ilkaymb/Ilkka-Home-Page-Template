@@ -31,7 +31,7 @@ const Slider: React.FC<SlideInterface> = ({ slides }) => {
   }, [currentIndex]);
 
   return (
-    <div className="w-full py-10 mt-10 bg-[#101010]">
+    <div className="w-full py-10 mt-10 bg-[#161616]">
       <div className="container mx-auto px-5">
       <h1
           style={{

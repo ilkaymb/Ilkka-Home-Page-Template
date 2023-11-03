@@ -6,7 +6,7 @@ const Card: React.FC<CardInterface> = ({ title, content, image }) => {
   return (
    
     <div
-      className="  lg:w-card-width-lg md:w-card-width-md sm:w-card-width-sm pt-10 bg-[#101010]"
+      className="  lg:w-card-width-lg md:w-card-width-md sm:w-card-width-sm pt-10 bg-[#161616]"
       style={{ zIndex: 2, borderRadius: 25 }}
     >
       {image && (
