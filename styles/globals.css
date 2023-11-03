@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-limit {
+.text-limit1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* number of lines you want to display */
+  overflow: hidden;
+}
+
+.text-limit2 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* number of lines you want to display */

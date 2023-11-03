@@ -33,19 +33,19 @@ const Navbar = () => {
               href="#"
               className="text-white-800 hover:text-black flex items-center gap-2"
             >
-              <FaHome size="20px" /> Home
+              <FaHome size="16px" /> Home
             </a>
             <a
               href="#"
               className="text-white-800 hover:text-black flex items-center gap-2"
             >
-              <FaUser size="20px" /> About
+              <FaUser size="16px" /> About
             </a>
             <a
               href="#"
               className="text-white-800 hover:text-black flex items-center gap-2 transition duration-300"
             >
-              <FaEnvelope size="20px" /> Contact
+              <FaEnvelope size="16px" /> Contact
             </a>
           </div>
           <div className="md:hidden flex items-center">
@@ -71,24 +71,28 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={isOpen ? "md:hidden pb-5" : "hidden"}>
+      <div
+        className={`overflow-hidden transition-all duration-400 ease-in-out ${
+          isOpen ? "md:hidden pb-5 max-h-60 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
         <a
           href="#"
           className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
         >
-          <FaHome size="20px" /> Home
+          <FaHome size="16px" /> Home
         </a>
         <a
           href="#"
           className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
         >
-          <FaUser size="20px" /> About
+          <FaUser size="16px" /> About
         </a>
         <a
           href="#"
           className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
         >
-          <FaEnvelope size="20px" /> Contact
+          <FaEnvelope size="16px" /> Contact
         </a>
       </div>
     </nav>

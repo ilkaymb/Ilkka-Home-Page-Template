@@ -30,9 +30,11 @@ const GridComponent = () => {
               className="lg:h-big-news-lg md:h-big-news-md"
             />{" "}
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 ">Haber 1</h3>
+              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+                Haber 1
+              </h3>
 
-              <p className="text-limit w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
+              <p className="text-limit2 w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 mollitia, molestiae quas vel sint commodi repudiandae
                 consequuntur voluptatum laborum numquam blanditiis harum
@@ -55,9 +57,11 @@ const GridComponent = () => {
               cover
             />{" "}
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 ">Haber 2</h3>
+              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+                Haber 2
+              </h3>
 
-              <p className="text-limit w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
+              <p className="text-limit2 w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 mollitia, molestiae quas vel sint commodi repudiandae
                 consequuntur voluptatum laborum numquam blanditiis harum
@@ -80,9 +84,11 @@ const GridComponent = () => {
               className=" lg:h-small-news-lg md:h-small-news-md"
             />
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 ">Haber 3</h3>
+              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+                Haber 3
+              </h3>
 
-              <p className="text-limit w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
+              <p className="text-limit2 w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 mollitia, molestiae quas vel sint commodi repudiandae
                 consequuntur voluptatum laborum numquam blanditiis harum
@@ -105,9 +111,11 @@ const GridComponent = () => {
               className=" lg:h-small-news-lg md:h-small-news-md"
             />{" "}
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 ">Haber 4</h3>
+              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+                Haber 4
+              </h3>
 
-              <p className="text-limit w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
+              <p className="text-limit2 w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 mollitia, molestiae quas vel sint commodi repudiandae
                 consequuntur voluptatum laborum numquam blanditiis harum
@@ -130,9 +138,11 @@ const GridComponent = () => {
               className=" lg:h-small-news-lg md:h-small-news-md"
             />{" "}
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 ">Haber 5</h3>
+              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+                Haber 5
+              </h3>
 
-              <p className="text-limit w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
+              <p className="text-limit2 w-full text-gray-400  mb-4 whitespace-normal leading-relaxed ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 mollitia, molestiae quas vel sint commodi repudiandae
                 consequuntur voluptatum laborum numquam blanditiis harum
