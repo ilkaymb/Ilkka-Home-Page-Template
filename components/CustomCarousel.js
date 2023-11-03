@@ -118,7 +118,7 @@ const Slider = () => {
           </div>
           <button
             onClick={goToPrevious}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 bg-red-900 text-white"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-red-800 p-2 text-white"
             style={{
               width: 50,
               padding: 10,
@@ -130,7 +130,7 @@ const Slider = () => {
           </button>
           <button
             onClick={goToNext}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 bg-red-900 text-white"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-red-800 text-white"
             style={{
               width: 50,
               padding: 10,
