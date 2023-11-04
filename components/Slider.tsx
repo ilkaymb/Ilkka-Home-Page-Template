@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useCallback} from "react";
 import SlideInterface from "@/interfaces/SlideInterface";
 
 
@@ -7,28 +7,35 @@ import SlideInterface from "@/interfaces/SlideInterface";
 const Slider: React.FC<SlideInterface> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToNext = () => {
+  // useCallback ile goToNext fonksiyonunu memoize edin
+  const goToNext = useCallback(() => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, slides.length]);
 
+  // Etki için bağımlılık dizisine goToNext'i ekleyin
   useEffect(() => {
-    const interval = setInterval(() => {
-      goToNext();
-    }, 5000);
+    const interval = setInterval(goToNext, 5000);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [goToNext]);
+
+  // goToSlide ve goToPrevious fonksiyonlarına useCallback kullanmanız gerekebilir.
+  // Bu, onların da her render'da yeniden oluşturulmamasını sağlar.
+  // Aşağıdaki gibi güncelleyebilirsiniz:
+
+  const goToSlide = useCallback(
+    (index: number) => {
+      setCurrentIndex(index);
+    },
+    [setCurrentIndex]
+  );
+
+  const goToPrevious = useCallback(() => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  }, [currentIndex, slides.length]);
 
   return (
     <div className="w-full py-10 mt-10 bg-[#161616]">
