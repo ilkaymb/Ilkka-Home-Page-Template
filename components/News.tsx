@@ -26,11 +26,11 @@ const GridComponent = () => {
             <Image
               src={NewsImage1}
               alt="news image"
-              cover
+              objectFit="cover"
               className="lg:h-big-news-lg md:h-big-news-md"
             />{" "}
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+              <h3 className="font-medium text-gray-300 mb-2 text-limit1 ">
                 Haber 1
               </h3>
 
@@ -54,10 +54,10 @@ const GridComponent = () => {
               src={NewsImage2}
               alt="news image"
               className=" lg:h-small-news-lg md:h-small-news-md"
-              cover
+              objectFit="cover"
             />{" "}
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+              <h3 className="font-medium text-gray-300 mb-2 text-limit1 ">
                 Haber 2
               </h3>
 
@@ -80,11 +80,11 @@ const GridComponent = () => {
             <Image
               src={NewsImage3}
               alt="news image"
-              cover
+              objectFit="cover"
               className=" lg:h-small-news-lg md:h-small-news-md"
             />
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+              <h3 className="font-medium text-gray-300 mb-2 text-limit1 ">
                 Haber 3
               </h3>
 
@@ -107,11 +107,11 @@ const GridComponent = () => {
             <Image
               src={NewsImage4}
               alt="news image "
-              cover
+              objectFit="cover"
               className=" lg:h-small-news-lg md:h-small-news-md"
             />{" "}
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+              <h3 className="font-medium text-gray-300 mb-2 text-limit1 ">
                 Haber 4
               </h3>
 
@@ -134,11 +134,11 @@ const GridComponent = () => {
             <Image
               src={NewsImage5}
               alt="news image"
-              cover
+              objectFit="cover"
               className=" lg:h-small-news-lg md:h-small-news-md"
             />{" "}
             <div className="mt-4">
-              <h3 class="font-medium text-gray-300 mb-2 text-limit1 ">
+              <h3 className="font-medium text-gray-300 mb-2 text-limit1 ">
                 Haber 5
               </h3>
 
