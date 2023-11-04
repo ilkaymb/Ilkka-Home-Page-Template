@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState, useEffect , useCallback} from "react";
-import SlideInterface from "@/interfaces/SlideInterface";
+import SlideInterface from "@/interface/SlideInterface";
 
 
 
