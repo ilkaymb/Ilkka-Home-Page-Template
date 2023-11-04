@@ -3,3 +3,6 @@ export interface SlideInterface {
   title: string;
   description: string;
 }
+export interface SlideAreaInterface {
+  slides: SlideInterface[]; // CardInterface tipinde bir dizi.
+}

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React, { useState, useEffect , useCallback} from "react";
-import SlideInterface from "@/interface/SlideInterface";
+import {SlideAreaInterface} from "@/interface/SlideInterface";
 
 
 
-const Slider: React.FC<SlideInterface> = ({ slides }) => {
+const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // useCallback ile goToNext fonksiyonunu memoize edin
