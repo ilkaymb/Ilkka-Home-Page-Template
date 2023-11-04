@@ -21,7 +21,7 @@ const GridComponent = () => {
           Haberler
         </h1>
         <div className="grid grid-cols-1 w-full gap-5  md:grid-cols-2 md:grid-rows-1 lg:grid-cols-4 lg:grid-rows-2 ">
-          {/* Large Box (Left) */}
+        
           <div className=" col-span-1 md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-2 flex  flex-col text-sm ">
             <Image
               src={NewsImage1}
@@ -48,7 +48,7 @@ const GridComponent = () => {
             </div>
           </div>
 
-          {/* Right Top 1 (Left) */}
+         
           <div className=" col-span-1 md:col-span-1  text-sm md:h-full">
             <Image
               src={NewsImage2}
@@ -75,7 +75,7 @@ const GridComponent = () => {
             </div>
           </div>
 
-          {/* Right Top 2 (Right) */}
+         
           <div className=" col-span-1 md:col-span-1 flex  flex-col text-sm md:h-full ">
             <Image
               src={NewsImage3}
@@ -102,7 +102,7 @@ const GridComponent = () => {
             </div>
           </div>
 
-          {/* Right Bottom 1 (Left) */}
+        
           <div className=" col-span-1 md:col-span-1 lg:col-start-3 flex flex-col text-sm md:h-full ">
             <Image
               src={NewsImage4}
@@ -129,7 +129,7 @@ const GridComponent = () => {
             </div>
           </div>
 
-          {/* Right Bottom 2 (Right) */}
+       
           <div className=" col-span-1 md:col-span-1 lg:col-start-4 flex flex-col text-sm md:h-full ">
             <Image
               src={NewsImage5}

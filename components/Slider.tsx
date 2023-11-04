@@ -7,22 +7,17 @@ import {SlideAreaInterface} from "@/interface/SlideInterface";
 const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useCallback ile goToNext fonksiyonunu memoize edin
   const goToNext = useCallback(() => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   }, [currentIndex, slides.length]);
 
-  // Etki için bağımlılık dizisine goToNext'i ekleyin
   useEffect(() => {
     const interval = setInterval(goToNext, 5000);
     return () => clearInterval(interval);
   }, [goToNext]);
 
-  // goToSlide ve goToPrevious fonksiyonlarına useCallback kullanmanız gerekebilir.
-  // Bu, onların da her render'da yeniden oluşturulmamasını sağlar.
-  // Aşağıdaki gibi güncelleyebilirsiniz:
 
   const goToSlide = useCallback(
     (index: number) => {

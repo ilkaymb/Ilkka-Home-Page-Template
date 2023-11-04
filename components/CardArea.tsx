@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-import { CardAreaInterface } from '@/interface/CardInterface'; // Bu satırı düzeltin.
+import { CardAreaInterface } from '@/interface/CardInterface';
 
 const CardArea: React.FC<CardAreaInterface> = ({cards}) => {
   return (

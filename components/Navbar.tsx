@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaHome, FaUser, FaEnvelope } from "react-icons/fa"; // Importing react icons for Home, About, and Contact
+import { FaHome, FaUser, FaEnvelope } from "react-icons/fa"; 
 import Icon from "@/images/icon.svg";
 import Image from "next/image";
 
