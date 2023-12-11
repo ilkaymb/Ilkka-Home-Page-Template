@@ -5,7 +5,7 @@
 .text-limit1 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* number of lines you want to display */
+  -webkit-line-clamp: 1; /* number of lines you want to display */
   overflow: hidden;
 }
 
@@ -20,4 +20,12 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4; /* number of lines you want to display */
   overflow: hidden;
+}
+.no-selectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }

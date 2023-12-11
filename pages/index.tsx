@@ -58,7 +58,11 @@ export default function Home() {
       className={`bg-black flex min-h-screen flex-col items-center justify-between ${roboto.className}`}
     >
 <Navbar />
-<Image src={EntranceImage} alt="Entrance photo" style={{width:"100%",height:"60vh",zIndex:0,objectFit:"cover"}}  objectFit="cover"/>
+<div  style={{width:"100%",height:"60vh",position:"relative",display:"flex",justifyContent:"center",alignItems:"center"}}>
+<div className='text-4xl font-bold text-white text-center bg-[#000d] rounded-lg p-10 m-2 shadow'  style={{zIndex:2,maxWidth:800}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+<Image src={EntranceImage} alt="Entrance photo" style={{objectFit:"cover",position:"absolute",}}  fill/>
+</div>
+
 <CardArea cards={cards}/>
 <Slider 
   slides={slides}
