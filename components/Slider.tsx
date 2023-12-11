@@ -58,17 +58,26 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
   };
 
   useEffect(() => {
-    const slider = sliderRef.current;
+    const slider = sliderRef.current || null;
 
     if (slider) {
-      slider.addEventListener("mousemove", handleMouseMove);
-      slider.addEventListener("mouseup", handleMouseUp);
+      const slider = sliderRef.current as HTMLElement | null;
+      if (slider) {
+        slider.addEventListener("mousemove", handleMouseMove);
+        slider.addEventListener("mouseup", handleMouseUp);
+      }
     }
 
     return () => {
       if (slider) {
-        slider.removeEventListener("mousemove", handleMouseMove);
-        slider.removeEventListener("mouseup", handleMouseUp);
+        const slider = sliderRef.current as HTMLElement | null;
+        if (slider) {
+          slider.addEventListener("mousemove", handleMouseMove);
+          slider.addEventListener("mouseup", handleMouseUp);
+        }
+      }
+      else{
+        console.log("slider null")
       }
     };
   }, [handleMouseMove]);
