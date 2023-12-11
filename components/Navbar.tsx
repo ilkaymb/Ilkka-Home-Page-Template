@@ -2,6 +2,7 @@ import React, { useState ,useEffect} from "react";
 import { FaHome, FaUser, FaEnvelope } from "react-icons/fa"; 
 import Icon from "@/images/icon.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,16 +26,16 @@ const Navbar = () => {
       <div className="container mx-auto p-4">
         <div className="flex justify-between items-center">        
         <div className="hidden md:flex space-x-4">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-white-800 hover:text-red-500 flex items-center gap-2"
             >
               <FaHome size="16px" /> Home
-            </a>
+            </Link>
 
           </div>
-          <a
-            href="#"
+          <Link
+            href="/"
             className="font-bold  relative flex justify-center items-center w-full absolute gap-4 text-4xl"
           >
             <Image
@@ -47,21 +48,21 @@ const Navbar = () => {
               }} objectFit="contain"
             />
             ILKKA
-          </a>
+          </Link>
           <div className="hidden md:flex space-x-4">
 
-            <a
-              href="#"
+            <Link
+              href="https://ilkay-mehmet-bora-cv-website.vercel.app/"
               className="text-white-800 hover:text-red-500 flex items-center gap-2"
             >
               <FaUser size="16px" /> About
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="https://ilkay-mehmet-bora-cv-website.vercel.app/contact"
               className="text-white-800 hover:text-red-500 flex items-center gap-2 transition duration-300"
             >
               <FaEnvelope size="16px" /> Contact
-            </a>
+            </Link>
           </div>
           <div className="md:hidden flex items-center">
             <button
@@ -91,24 +92,24 @@ const Navbar = () => {
           isOpen ? "md:hidden pb-5 max-h-60 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <a
-          href="#"
+        <Link
+          href="/"
           className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-red-500 flex items-center gap-2"
         >
           <FaHome size="16px" /> Home
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          href="https://ilkay-mehmet-bora-cv-website.vercel.app/"
           className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-red-500 flex items-center gap-2"
         >
           <FaUser size="16px" /> About
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          href="https://ilkay-mehmet-bora-cv-website.vercel.app/contact"
           className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-red-500 flex items-center gap-2"
         >
           <FaEnvelope size="16px" /> Contact
-        </a>
+        </Link>
       </div>
     </nav>
   );

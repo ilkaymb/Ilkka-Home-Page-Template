@@ -33,7 +33,7 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
   }, [currentIndex, slides.length]);
 
   return (
-    <div className="w-full py-10 mt-10 bg-[#161616]">
+    <div className="w-full py-10 mt-10 bg-red-800">
       <div className="container mx-auto px-5">
       <h1
           style={{
@@ -91,11 +91,11 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
           </div>
           <button
             onClick={goToPrevious}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-red-800 p-2 text-white  hover:bg-red-700"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black p-2 text-white  hover:bg-red-700 transition duration-300"
             style={{
               width: 50,
               padding: 10,
-              borderRadius: 12,
+              borderRadius: " 0 12px 12px 0 ",
               boxShadow: "0px 0px 8px 0px rgba(0,0,0,0.25)",
             }}
           >
@@ -103,11 +103,11 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
           </button>
           <button
             onClick={goToNext}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-red-800  hover:bg-red-700 text-white"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-black  hover:bg-red-700 text-white transition duration-300"
             style={{
               width: 50,
               padding: 10,
-              borderRadius: 12,
+              borderRadius: "12px 0 0 12px",
               boxShadow: "0px 0px 8px 0px rgba(0,0,0,0.25)",
             }}
           >
