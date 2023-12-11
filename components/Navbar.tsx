@@ -15,7 +15,6 @@ const Navbar = () => {
       window.addEventListener('scroll', onScroll, { passive: true });
       return () => window.removeEventListener('scroll', onScroll);
   }, []);
-  console.log(offset);
   return (
     <nav
       className="shadow w-full fixed bg-red-900 transition duration-500 ease-out"
