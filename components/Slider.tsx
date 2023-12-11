@@ -32,13 +32,13 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
     setCurrentIndex(newIndex);
   }, [currentIndex, slides.length]);
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e:any) => {
     setIsDragging(true);
     setStartX(e.clientX);
   };
 
   const handleMouseMove = useCallback(
-    (e) => {
+    (e:any) => {
       if (!isDragging) return;
       e.preventDefault();  // Varsayılan davranışı engelle
       const moveX = e.clientX - startX;
