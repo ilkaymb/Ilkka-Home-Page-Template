@@ -6,8 +6,8 @@ const Card: React.FC<CardInterface> = ({ title, content, image }) => {
   return (
    
     <div
-      className="  lg:w-card-width-lg md:w-card-width-md sm:w-card-width-sm pt-10 bg-[#161616]"
-      style={{ zIndex: 2, borderRadius: 25 }}
+      className="  lg:w-card-width-lg md:w-card-width-md sm:w-card-width-sm pt-10 bg-[#161616] transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-105"
+      style={{ zIndex: 2, borderRadius:12 }}
     >
       {image && (
         <div className="  w-full  relative ">
@@ -15,7 +15,7 @@ const Card: React.FC<CardInterface> = ({ title, content, image }) => {
             src={image}
             alt={title}
             objectFit="cover"
-            style={{ width: "100%", height: "250px" }}
+            style={{ width: "100%", height: "200px" }}
           />
         </div>
       )}
@@ -26,7 +26,7 @@ const Card: React.FC<CardInterface> = ({ title, content, image }) => {
         <p className="text-gray-600  mb-4 whitespace-normal leading-relaxed text-limit2 text-center">
           {content}
         </p>
-        <button className="bg-red-800  hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-5">
+        <button className="bg-red-800  hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
           Read More
         </button>
       </div>

@@ -58,7 +58,7 @@ export default function Home() {
       className={`bg-black flex min-h-screen flex-col items-center justify-between ${roboto.className}`}
     >
 <Navbar />
-<Image src={EntranceImage} alt="Entrance photo" style={{width:"100%",minHeight:"90vh",position:"absolute",zIndex:0}}  objectFit="cover"/>
+<Image src={EntranceImage} alt="Entrance photo" style={{width:"100%",height:"60vh",zIndex:0,objectFit:"cover"}}  objectFit="cover"/>
 <CardArea cards={cards}/>
 <Slider 
   slides={slides}

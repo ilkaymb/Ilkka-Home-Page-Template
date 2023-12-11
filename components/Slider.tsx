@@ -45,9 +45,9 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
         >
           Projelerimiz
         </h1>
-        <div className="relative w-full mx-auto overflow-hidden rounded-lg">
+        <div className="relative w-full mx-auto overflow-hidden  rounded-lg">
           <div
-            className="whitespace-nowrap transition-transform duration-700 ease-in-out mx-auto"
+            className="whitespace-nowrap transition-transform duration-700 ease-in-out mx-auto  rounded-lg"
             style={{
               transform: `translateX(-${currentIndex * 100}%)`,
             }}
@@ -55,33 +55,33 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="inline-block w-full relative mx-auto h-full py-100"
+                className="inline-block w-full relative mx-auto h-full py-100 rounded-lg "
               >
-                <div
+                <div className=" 	lg:rounded-lg"
                   style={{
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
-                    flexWrap: "wrap",
+                    alignItems: "flex-start",
+                    flexWrap: "wrap",backgroundColor:"white",width:"100%",height:"100%"
                   }}
                 >
                   <Image
-                    className="lg:h-slide-width md:h-full lg:w-slide-width md:w-full"
+                    className="sm:w-full lg:w-3/6	lg:rounded-l-lg" style={{height:"100%"}}
                     src={slide.image}
                     alt={`Slide ${index}`}
                      objectFit="cover"
                   />
                   <div
-                    className="lg:w-slide-width lg:h-slide-width md:h-full"
+                     className="sm:w-full md:w-3/6		lg:rounded-r-lg"
                     style={{
-                      backgroundColor: "white",
-                      padding: 20,
+                
+                      padding: 50,height:"100%"
                     }}
                   >
                     <h2 className="text-3xl font-semibold text-gray-800 mb-3 whitespace-normal text-center text-limit2">
                       {slide.title}
                     </h2>
-                    <p className="text-gray-600 mb-4 whitespace-normal leading-relaxed text-limit8">
+                    <p className="text-gray-600 mb-4 whitespace-normal leading-relaxed text-limit4">
                       {slide.description}
                     </p>
                   </div>

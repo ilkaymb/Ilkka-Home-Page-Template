@@ -1,21 +1,41 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { FaHome, FaUser, FaEnvelope } from "react-icons/fa"; 
 import Icon from "@/images/icon.svg";
 import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [offset, setOffset] = useState(0);
 
+  useEffect(() => {
+      const onScroll = () => setOffset(window.pageYOffset);
+      // clean up code
+      window.removeEventListener('scroll', onScroll);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  console.log(offset);
   return (
     <nav
-      className="shadow w-full fixed bg-red-900"
-      style={{ color: "white", zIndex: 999 }}
+      className="shadow w-full fixed bg-red-900 transition duration-500 ease-out"
+      style={{ color: "white", zIndex: 999,background:offset ==0 ? "linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.90) 31.96%, rgba(0, 0, 0, 0.80) 69.17%, rgba(0, 0, 0, 0.54) 91.58%)":"black",
+
+      boxShadow:" 0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
     >
       <div className="container mx-auto p-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center">        
+        <div className="hidden md:flex space-x-4">
+            <a
+              href="#"
+              className="text-white-800 hover:text-red-500 flex items-center gap-2"
+            >
+              <FaHome size="16px" /> Home
+            </a>
+
+          </div>
           <a
             href="#"
-            className="font-bold relative flex justify-center items-center gap-4 text-4xl"
+            className="font-bold  relative flex justify-center items-center w-full absolute gap-4 text-4xl"
           >
             <Image
               src={Icon}
@@ -29,21 +49,16 @@ const Navbar = () => {
             ILKKA
           </a>
           <div className="hidden md:flex space-x-4">
+
             <a
               href="#"
-              className="text-white-800 hover:text-black flex items-center gap-2"
-            >
-              <FaHome size="16px" /> Home
-            </a>
-            <a
-              href="#"
-              className="text-white-800 hover:text-black flex items-center gap-2"
+              className="text-white-800 hover:text-red-500 flex items-center gap-2"
             >
               <FaUser size="16px" /> About
             </a>
             <a
               href="#"
-              className="text-white-800 hover:text-black flex items-center gap-2 transition duration-300"
+              className="text-white-800 hover:text-red-500 flex items-center gap-2 transition duration-300"
             >
               <FaEnvelope size="16px" /> Contact
             </a>
@@ -78,19 +93,19 @@ const Navbar = () => {
       >
         <a
           href="#"
-          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
+          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-red-500 flex items-center gap-2"
         >
           <FaHome size="16px" /> Home
         </a>
         <a
           href="#"
-          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
+          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-red-500 flex items-center gap-2"
         >
           <FaUser size="16px" /> About
         </a>
         <a
           href="#"
-          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-black flex items-center gap-2"
+          className="block py-2 px-4 text-white hover:bg-gray-100 hover:text-red-500 flex items-center gap-2"
         >
           <FaEnvelope size="16px" /> Contact
         </a>
