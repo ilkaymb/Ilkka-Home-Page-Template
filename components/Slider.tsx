@@ -20,7 +20,7 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
   }, [goToNext]);
 
   const goToSlide = useCallback(
-    (index) => {
+    (index:any) => {
       setCurrentIndex(index);
     },
     [setCurrentIndex]
