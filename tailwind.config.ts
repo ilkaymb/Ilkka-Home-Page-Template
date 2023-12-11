@@ -22,6 +22,7 @@ const config: Config = {
         "small-news-lg": "150px",
         "big-news-md": "300px",
         "small-news-md": "200px",
+        "slide-height": "500px",
       },
     },
   },

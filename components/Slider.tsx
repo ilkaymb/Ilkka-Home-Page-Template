@@ -103,12 +103,12 @@ const Slider: React.FC<SlideAreaInterface> = ({ slides }) => {
                 key={index}
                 className="inline-block w-full relative mx-auto h-full py-100 "
               >
-                <div className="shadow 	lg:rounded-2xl no-selectable" draggable="false"
+                <div className="shadow lg:h-slide-height  sm:h-full 	lg:rounded-2xl no-selectable" draggable="false"
                   style={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "flex-start",
-                    flexWrap: "wrap",backgroundColor:"#161616",width:"100%",height:"500px"
+                    flexWrap: "wrap",backgroundColor:"#161616",width:"100%"
                   }}
                 >
                   <Image draggable="false"
