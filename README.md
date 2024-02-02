@@ -1,4 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![ILKKA](https://github.com/ilkaymb/Ilkka-Home-Page/assets/73322500/967a225f-66c6-4be7-aef3-c7690d54c5ab)
 
 ## Getting Started
 
